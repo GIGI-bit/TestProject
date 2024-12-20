@@ -15,7 +15,9 @@ namespace TestProject.Controllers
 
         public IActionResult Index()
         {
-            return View();
+                                       var num = 0;
+            var name = "sevgi";
+                                                        return View();
         }
 
         public IActionResult Privacy()
