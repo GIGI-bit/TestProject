@@ -24,5 +24,11 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+    - name: Format
+      run: dotnet restore
+    - name: Install dotnet-format
+      run: dotnet tool install -g dotnet-format
+    - name: Run dotnet format
+      run: dotnet format --check
     - name: Test
       run: dotnet test --no-build --verbosity normal
